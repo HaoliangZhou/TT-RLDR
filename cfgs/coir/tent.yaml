@@ -1,0 +1,25 @@
+CORRUPTION:
+  DATASET: cirr
+  SEVERITY:
+    - ""
+  TYPE:
+    - ""
+MODEL:
+  ADAPTATION: tent
+  USE_CLIP: True
+  ARCH: ViT-B-16
+  WEIGHTS: openai
+OPTIM:
+  BETA: 0.9
+  LR: 0.0005
+  METHOD: AdamW
+  STEPS: 1
+  WD: 0.0
+TEST:
+  BATCH_SIZE: 64
+CLIP:
+  FIXED_VISUAL_LAYER: 0
+  FIXED_TEXTUAL_LAYER: 0
+
+
+#LR: 0.00025

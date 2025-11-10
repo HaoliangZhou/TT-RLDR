@@ -1,0 +1,19 @@
+CORRUPTION:
+  DATASET: cirr
+  SEVERITY:
+    - ""
+  TYPE:
+    - ""
+  DATASET_FIQTYPE: dress  # dress toptee shirt
+MODEL:
+  ADAPTATION: source
+  USE_CLIP: True
+  ARCH: ViT-B-16
+  WEIGHTS: openai
+  USE_BLIP: False
+  USE_ALBEF: False
+OPTIM:
+  MIXTURE_FACTOR_TEXT: 0.7
+  USE_STATIC_SLERP: False
+TEST:
+  BATCH_SIZE: 64

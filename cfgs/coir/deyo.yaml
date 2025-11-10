@@ -1,0 +1,22 @@
+CORRUPTION:
+  DATASET: cirr
+  SEVERITY:
+    - ""
+  TYPE:
+    - ""
+MODEL:
+  ADAPTATION: deyo
+  USE_CLIP: True
+  ARCH: ViT-B-16
+  WEIGHTS: openai
+  # WEIGHTS: laion2b_s34b_b88k
+OPTIM:
+  BETA: 0.9
+  LR: 0.0005
+  METHOD: AdamW
+  STEPS: 1
+  WD: 0.0
+TEST:
+  BATCH_SIZE: 64
+
+# CUDA_VISIBLE_DEVICES=2 python test_time.py --cfg cfgs/coir/deyo.yaml CORRUPTION.DATASET coco OPTIM.METHOD AdamW OPTIM.LR 0.0005 DESC coco_deyo_AdamW_lr0.0005

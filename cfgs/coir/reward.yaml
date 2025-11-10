@@ -1,0 +1,46 @@
+DATA_DIR: /path/to/data
+CORRUPTION:
+  DATASET: cirr
+  SEVERITY:
+    - ""
+  TYPE:
+    - ""
+MODEL:
+  ADAPTATION: reward
+  USE_CLIP: True
+  ARCH: ViT-B-16  # [B16: openai,laion2b_s34b_b88k ===== L14: openai, laion2b_s32b_b82k]
+  WEIGHTS: openai
+REWARD:
+  MOMENTUM_UPDATE: 0
+  UPDATE_FREQ: 64
+  UPDATE_W: 1.0
+  MOMENTUM: 0.05
+  REWARD_ARCH: ViT-L-14 # ViT-L-14, ViT-H-14, ViT-g-14
+  REWARD_ARCH_WEIGHTS: openai # [L14: openai, laion2b_s32b_b82k ====== H14: laion2b_s32b_b79k, G14: laion2b_s34b_b88k]
+  REWARD_AMPLIFY: 0
+  SAMPLE_K: 16
+  SAMPLING_TYPE: "temperature" # ["temperature", "topk"]
+  REWARD_PROCESS: 1
+  PROCESS_BATCH: 0
+  MULTIPLE_REWARD_MODELS: False
+  BASEINE_SCORE: "RLOO"  # ["mean", "RLOO"]
+  TEMPERATURE: 1.0
+  TEACHER_TEXT_FACTOR: 0.8
+  USE_SELF_REWARD: True
+  SELF_REWARD_WEIGHT: 1.0
+OPTIM:
+  BETA: 0.9
+  LR: 0.0005
+  METHOD: AdamW
+  STEPS: 8
+  WD: 5e-4
+  MIXTURE_FACTOR_IMG: 0.2
+  MIXTURE_FACTOR_TEXT: 0.8
+  FUSION_TYPE: "lerp"  # ["slerp", "nlerp", "lerp", "avg"]
+  USE_STATIC_SLERP: False
+TEST:
+  BATCH_SIZE: 1
+CLIP:
+  FIXED_VISUAL_LAYER: 0
+  FIXED_TEXTUAL_LAYER: 0
+DESC: ""
