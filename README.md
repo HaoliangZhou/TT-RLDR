@@ -1,3 +1,17 @@
+## [AAAI 26] Duplex Rewards Optimization for Test-Time Composed Image Retrieval [![paper](https://img.shields.io/badge/Paper-87CEEB)](https://github.com/HaoliangZhou/TT-RLDR/blob/master/TT-RLDR_paper.pdf) <br> 
+*Haoliang Zhou, Feifei Zhang, Changsheng Xu <br> 
+
+##
+
+## Abstract <br>
+Composed Image Retrieval (CIR) combines the reference image with text to retrieve the intended target image. Recently, zero-shot CIR has gained significant attention by eliminating the need for labeled triplets required in supervised CIR. However, it inevitably demands additional training corpus, storage, and computational resources, limiting its applicability in real-world scenarios. Inspired by advancements in Test-Time Adaptation (TTA), we propose a Test-Time CIR setting named TT-CIR, which aims to efficiently adapt models to unlabeled test samples while reducing resource consumption. Within the TT-CIR setting, we identify that naively introducing existing TTA methods (e.g., reward-based) into CIR faces two vital challenges: 1) Modification-restricted reward pool, which limits the exploration of semantically relevant candidate rewards; 2) Conservative knowledge feedback, which inhibits the adaptability of rewards to the current data distribution. To address these challenges, we propose a test-time reinforcement learning framework that integrates a Counterfactual-guided Multinomial Sampling (CMS) strategy and a Duplex Rewards Modeling (DRM) module. The CMS explores a candidate reward pool that is visually similar and semantically relevant to the given query, while the DRM generates stable and adaptive duplex rewards to guide model adaptation. Extensive experiments demonstrate the superiority and adaptability of our method over existing approaches.
+
+<p align="center">
+<img src="https://github.com/HaoliangZhou/TT-RLDR/blob/master/ttrldr.png" width=100% height=100% 
+class="center">
+</p>
+
+
 ## Setup and Environments
 - Basic environments
 ```
