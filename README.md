@@ -1,5 +1,5 @@
 ## [AAAI 26] Duplex Rewards Optimization for Test-Time Composed Image Retrieval [![paper](https://img.shields.io/badge/Paper-87CEEB)](https://github.com/HaoliangZhou/TT-RLDR/blob/master/TT-RLDR_paper.pdf) <br> 
-*Haoliang Zhou, Feifei Zhang, Changsheng Xu <br> 
+*Haoliang Zhou, Feifei Zhang, Changsheng Xu* <br> 
 
 ##
 
