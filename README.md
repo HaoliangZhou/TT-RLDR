@@ -39,7 +39,7 @@ pip install -e .
 
 ---
 ## Data Preparation
-Overall structure of this directory should be as follows, such as:
+Overall structure of this directory should be as follows.
 ```bash
 data
    ├── CIRR
