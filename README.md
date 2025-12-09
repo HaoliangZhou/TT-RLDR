@@ -105,3 +105,20 @@ Images are downloaded from https://github.com/postBG/CosMo.pytorch.
     ```
     sh run_script.sh
     ```
+---
+## Cite Our Work
+If you find our work helps, please cite our paper.
+```
+@inproceedings{Zhou2026TTRLDR,
+  author={Zhou, Haoliang and Zhang, Feifei and Xu, Changsheng},
+  journal={AAAI Conference on Artificial Intelligence}, 
+  title={Duplex Rewards Optimization for Test-Time Composed Image Retrieval}, 
+  year={2026},
+  pages={1-9}
+}
+
+``` 
+
+---
+## Contact
+For any questions, welcome to create an issue or email to <a href="mailto:haoliangzhou6@gmail.com">haoliangzhou6@gmail.com</a>.
