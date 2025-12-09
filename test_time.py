@@ -10,7 +10,7 @@ from PIL import Image
 from models.model import get_model
 from models.model_reward import get_reward_model
 from utils.misc import print_memory_info
-from utils.eval_utils import evaluate_fashion, evaluate_cirr, evaluate_cirr_test, evaluate_coco
+from utils.eval_utils import evaluate_fashion, evaluate_cirr, evaluate_cirr_test
 from utils.registry import ADAPTATION_REGISTRY
 from datasets.data_loading import get_test_loader
 from conf import cfg, load_cfg_from_args, get_num_classes
@@ -59,7 +59,7 @@ def evaluate(description):
     available_adaptations = ADAPTATION_REGISTRY.registered_names()
     assert cfg.MODEL.ADAPTATION in available_adaptations, f"The adaptation '{cfg.MODEL.ADAPTATION}' is not supported! Choose from: {available_adaptations}"
 
-    if cfg.CORRUPTION.DATASET in ["fashioniq", "cirr", "cirr_test", "coco"]:
+    if cfg.CORRUPTION.DATASET in ["fashioniq", "cirr", "cirr_test"]:
         if cfg.MODEL.ADAPTATION == "reward" or cfg.MODEL.ADAPTATION == "kd":
             reward_model = get_reward_model(cfg, device)
             model = ADAPTATION_REGISTRY.get(cfg.MODEL.ADAPTATION)(cfg=cfg, model=base_model, reward_model=reward_model, combiner=combiner, num_classes=num_classes)
@@ -122,13 +122,6 @@ def evaluate(description):
         for key, value in results.items():
             with open(cfg.SAVE_DIR + '/reward' + '_' + key + '.json', 'w') as f:
                 json.dump(value, f)            
-    
-    elif cfg.CORRUPTION.DATASET == "coco":
-        if cfg.MODEL.ADAPTATION == "reward" or cfg.MODEL.ADAPTATION == "kd":
-            evaluate_coco(model=model, reward_model=reward_model, img2text=img2text, cfg=cfg, loader=test_source_dataset, device=device)
-        else:
-            evaluate_coco(model=model, img2text=img2text, cfg=cfg, loader=test_source_dataset, device=device)
-    
 
 
     logger.info(f"{cfg.CORRUPTION.DATASET} retrieval done! Any Details: {cfg.DESC}")
