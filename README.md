@@ -111,8 +111,8 @@ If you find our work helps, please cite our paper.
 ```
 @inproceedings{Zhou2026TTRLDR,
   author={Zhou, Haoliang and Zhang, Feifei and Xu, Changsheng},
-  journal={AAAI Conference on Artificial Intelligence}, 
-  title={Duplex Rewards Optimization for Test-Time Composed Image Retrieval}, 
+  title={Duplex Rewards Optimization for Test-Time Composed Image Retrieval},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2026},
   pages={1-9}
 }
