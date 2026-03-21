@@ -1,4 +1,4 @@
-## [AAAI 26] Duplex Rewards Optimization for Test-Time Composed Image Retrieval [![paper](https://img.shields.io/badge/Paper-87CEEB)](https://github.com/HaoliangZhou/TT-RLDR/blob/master/TT-RLDR_paper.pdf) <br> 
+## [AAAI 26] Duplex Rewards Optimization for Test-Time Composed Image Retrieval [![paper](https://img.shields.io/badge/Paper-87CEEB)](https://ojs.aaai.org/index.php/AAAI/article/view/38369) <br> 
 *Haoliang Zhou, Feifei Zhang, Changsheng Xu* <br> 
 
 ##
@@ -110,11 +110,13 @@ Images are downloaded from https://github.com/postBG/CosMo.pytorch.
 If you find our work helps, please cite our paper.
 ```
 @inproceedings{Zhou2026TTRLDR,
-  author={Zhou, Haoliang and Zhang, Feifei and Xu, Changsheng},
   title={Duplex Rewards Optimization for Test-Time Composed Image Retrieval},
+  author={Zhou, Haoliang and Zhang, Feifei and Xu, Changsheng},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2026},
-  pages={1-9}
+  volume={40},
+  number={16},
+  pages={13629--13637},
+  year={2026}
 }
 
 ``` 
